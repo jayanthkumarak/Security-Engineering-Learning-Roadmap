@@ -1,0 +1,4 @@
+- [[SAML]] is an open standard for authentication and authorization, wasn't designed for mobile devices, usage might go down over time.
+- [[OAuth]] is not an authentication protocol, it works in conjunction with [[OpenID Connect]]
+- 
+- 

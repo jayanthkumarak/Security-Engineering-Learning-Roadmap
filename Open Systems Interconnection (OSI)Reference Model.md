@@ -1,0 +1,12 @@
+- The OSI Reference Model is valuable as a tool for explaining how networks function, and for describing the relationships between different networking technologies and protocols. 
+- How to use the [[Open Systems Interconnection (OSI)Reference Model]]
+    - Some people downplay the model a lot, while others over-emphasize it too much, overanalyzing and trying to use it in a way that it was never intended. 
+    - Most common mistake is made when attempting to try to "make everything fit" into the layered structure of the OSI model. 
+    - “Learn from my experience. ^^A simple rule of thumb is this: Refer to the OSI Reference Model if it helps you make sense of technologies and understand how they work; don't use it if it makes things more complicated.^^ In particular, bear the following in mind:
+        - **It can be very hard to figure out where some technologies fall within the model.** Many protocols were designed without the OSI model in mind, and they may not fall neatly into one layer or another. Some overlap two or more layers; other protocol suites may have two protocols that share a layer.
+        - **The boundaries between the upper layers (session, presentation, and application) get particularly fuzzy.** Some protocols are clearly designed to fit on one of these layers, while others may overlap all three. This is one reason why I do not categorize higher-level protocols by layer. (The OSI Reference Model was designed to account for the fact that differentiating between these layers might not make sense.)
+        - **The OSI Reference Model was designed primarily with LANs in mind. WAN technologies often fit very poorly into the model, with a lot of overlapping and partial layer coverage. **However, it's still useful in most cases to look at these protocols in terms of their approximate fit in the OSI model, since parts of WAN technologies are sometimes interchanged.
+        - **The people who design products don't generally worry about ensuring that their latest inventions implement only specific layers of the model. Thus, sometimes new products come out that break the rules and implement functions across more than one layer**, which used to be done by multiple devices at the individual layers. This is usually progress—a good thing!”
+    - Excerpt From: [[Charles M. Kozierok]]. “[[THE TCP/IP GUIDE.]]” Apple Books. 
+- 
+- 

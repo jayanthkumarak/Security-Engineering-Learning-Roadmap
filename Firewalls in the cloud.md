@@ -1,0 +1,9 @@
+- Control traffic flows in the cloud
+    - inside the cloud and external flows
+- Relatively inexpensive compared to appliances
+    - Virtual firewalls
+    - host based firewalls
+- Segmentation
+    - Between micro services, VMs, or VPCs
+- Works at OSI layers 4 (TCP/UDP), Layer 7 (Application)
+- 
