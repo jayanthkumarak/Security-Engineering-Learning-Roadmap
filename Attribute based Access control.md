@@ -1,0 +1,5 @@
+- Users have complex relationships to entities and information in this form of a setup
+    - Access is not strictly role based, or level based or need-to-know based
+    - This form of access control is a next generation access control model
+    - This is because it has to consider many parameters, calculate context, rely on evaluation of things like desired action, time of day, relationship to the data, prior actions
+    - 

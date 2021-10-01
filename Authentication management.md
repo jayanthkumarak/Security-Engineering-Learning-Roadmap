@@ -1,0 +1,19 @@
+- Password keys
+    - hardware based auth
+    - helps prevents unauthorized logins
+    - doesn’t replace other factors, password still important
+- Password vaults
+    - Password manager, easiest way to prevent password reuse, and removes the overhead of creating and managing passwords
+    - Secure storage - all credentials are encrypted
+    - Cloud based sync
+    - It is very important to create unique passwords
+- [[Trusted Platform Module]]
+- [[Hardware Security Module (HSM)]]
+- [[Knowledge based authentication]]
+- [[Challenge-Handshake Authentication Protocol (CHAP)]]
+- [[RADIUS - Remote Authentication Dial-In User Service]]
+- [[TACACS+ - Terminal Access Controller Access-Control System+]]
+- [[KERBEROS]]
+- [[IEEE 802.1X]]
+- [[Federated Identities]]
+- 

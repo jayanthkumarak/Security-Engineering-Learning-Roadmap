@@ -1,0 +1,9 @@
+- Comes right after an authentication is performed - refer [[Authentication management]]
+- After a user or entity is granted access, then what levels of access are required to be granted, are determined by an Access Control system
+- One particular form of Access Control is [[Mandatory Access Control]] that is used in high-security environments
+- Most operating systems use [[Discretionary access control]]
+- In most organizations [[Role-based Access Control]] is used
+- Another form is [[Attribute based Access control]]
+- Also, [[Rule-based Access Control]]
+- [[Privileged Access Management]]
+- 

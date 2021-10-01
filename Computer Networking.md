@@ -1,0 +1,184 @@
+- ### The advantages and benefits of networking
+    - Networks connect computers and users of those computers. Individuals within a workgroup, a building (via LAN), or even people across distant locations can be connected via WANs
+    - Data sharing is much easier, prior to networking, hardware devices were used to physically copy and share information via the [[Sneakernet]]
+    - Hardware sharing can be performed when devices are networked, thus dramatically increasing the ability of an organization to share and pool resources. The simplest example is when a printer is on the network for an entire office, instead of everyone having one printer for themselves.
+    - Internet Access - the Internet itself is a broad network
+    - Data security and management - in a network, critical information can be administered better. Instead of spreading data over dozens or hundreds of small computers in a haphazard fashion as users create it, administrators can centralize on shared servers, making it easy for everyone to find the data. It also makes it easy to backup , and secure.
+    - Performance enhancement and balancing : You can distribute computational tasks to other computers on the network, and balance load and traffic via networking
+    - Entertainment
+- ### The disadvantages and costs of networking
+    - Networks don't just magically appear by themselves. There is significant costs in networking hardware, software, and setup costs. 
+    - Hardware and software management and administration costs
+    - Undesirable sharing - Having the ability to network brings with it the risk of malicious use, and undesirable sharing
+    - Illegal use - similar to above, abuse of company resources, distractions that reduce productvitiy, downloading and hosting illicit material, software piracy, propensity to being spied upon or spying others 
+    - Data security concerns
+- Fundamental network characteristics - even though networks of many types may be dissimilar, they are often described and even contrasted on the basis of a number of common attributes
+- ### Networking layers and models : 
+    - **Reasons for Complexity**: As a user, you are first only used to one machine, that runs programs like a browser on one piece of hardware. Networks can be highly complex due to the presence of so many elements, hardware types, nodes, machines.  
+    - The best way to analyze complex systems is to break them down into pieces and analyze what those pieces do and how they interact. ^^The most logical approach is to divide overall set of functions in a complex system into modular components, such that each set is responsible for a particular function. At the same time you have to define how these modular functions interface.^^
+    - Networking tech is often compartmentalized by dividing their functions into __layers__ each of which contains hardware and software elements. Each layer is responsible for a particular type of task and interacts with layers 'above' and 'below' it (in this [[Abstraction]] we define the layers as a stack for our convenience of understanding. It is purely conceptual.)
+        - Lower layers are charged with more concrete tasks such as hardware signaling, low-level communication, and these provide 'services' to the higher layers.
+        - The higher layers in turn, use these services to implement more abstract functions such as implementing user functions.
+    - ^^Think of 'model based classification' as a division of labor in a manufacturing facility. It yields similar benefits. ^^
+    - One of the main benefits apart from easy understandability and specialization of each node, or part of this system - is that it allows the **interoperability** of different technologies defined by various groups. For this to occur, everyone has to **concur** on how layers will be defined and used. The most common tool for this is the ^^**networking model**^^
+    - The most common general model in use today is the [[Open Systems Interconnection (OSI)Reference Model]] which consists of seven stacked layers. 
+    - 
+- ## Protocols
+    - In the real world, a protocol is a code of conduct, or etiquette that is observed by diplomats.
+    - Most people follow various protocols - which ensure that people can interact with each other in a reliable manner, similarly diplomats follow protocols so that they do not unintentionally offend some local custom.
+    - A protocol in networking is a way to ensure that devices from different manufacturers, and different regions are able to talk to each other effectively. 
+    - In most cases, a protocol describes how a hardware or a software element communicate with each other in two or more devices.
+    - In the context of the [[Open Systems Interconnection (OSI)Reference Model]], a protocol is formally defined as a set of rules governing communication between entities at the same layer of abstraction.
+    -  
+- # Review of Data Representation and the Mathematics of Computing
+    - Modern digital computers store information digitally. In the same way a light bulb has only an on or off value, so do the components that store and manipulate information within computers. Millions of transistors compose computer processors and other circuits, and are, in highly simplified form, digital switches. Thus, all information in computers is manipulated as collections of information pieces that can be only on or off, like a switch.
+    - Since there are only two possible states—on or off—this is called binary infor- mation (the prefix bi means two).
+    - The fundamental building block of computer information is the bit (a contraction of binary digit). Every bit can be either 0 or 1. Making the value of a bit 1 is commonly called setting the bit; changing it to 0 is resetting or clearing it.
+    - ### Byte :The most common grouping is to take 8 bits and reference them as a single unit. A collection of 8 bits is technically called an __octet__, but is more commonly called a __byte__. 
+    - Binary Information representation and terms - a Visual Guide (courtesy : [[The TCP/IP Guide]] by [[Charles M Kozierok]])
+        - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FSecurity-Engineering%2FYX2NSy3TqJ.png?alt=media&token=06775aa6-a707-4cd2-8f51-341c460ffc45)
+        - The term __character __is also used to express a set of 8 bits. This use comes from the
+fact that computers often store alphanumeric characters, such as letters and num-
+bers, one to a byte. The 16-bit __word __is used fairly often, but not nearly as much as
+__byte__. The larger collections of bits, such as double word and so on, are not often
+encountered in everyday parlance; they are used to represent chunks of data in
+technical fields such as hardware design or programming.
+    - ## Decimal, Binary, Octal, and Hexadecimal Numbers
+        - The key to understanding binary numbers is to realize that they are exactly the same as decimal numbers, except that each digit has a value in the range of 0 to 1, instead of 0 to 9. 
+        - For example, **when you count in decimals**, you go up to 9 in the ones place, 
+            - and then you need a second place for tens.
+            -  If you go above 99, you need a third place for hundreds.
+            -  Each additional place added on the left is a higher power of ten.
+        - **Binary** is the same, except the limit for each place is 1 instead of 9. So, in
+binary, you go up to 1 in the ones place, 
+            - and then need a second place for twos (instead of tens). 
+            - If you go above 3, you need a third place for fours (instead of
+hundreds). 
+            - Each added digit is a subsequent higher power of two, rather than ten.
+        - Thus, **where counting in decimal goes 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,**
+and so on, **counting in binary goes 0, 1, 10, 11, 100, 101, 110, 111, 1000, 1001, 1010,
+1011, 1100, 1101. **
+            - For example, ^^the number 13 in decimal is the same as 1101 in
+binary.^^
+            - How? Well, in decimal, we have a 3 in the ones place, plus a 1 in the tens
+place, which has a value of 10. This is 3 + 10, or 13.
+            -  In binary, we start with a 1 in the ones place, add a 1 in the fours place (for a value of 4), plus a 1 in the eights place, for a value of 8. This is 1 + 4 + 8, or 13.
+        - **Example of 211 in decimal to binary**
+            - 
+- 
+- ### Layer 1 Devices : 
+    - Analog modem - acronym for modulator / demodulator
+    - Convert digital signal to analog signal and place it on a wire -> in return, it converts a received analog signal into digital, and send it into a node. 
+    - Started use in public switched telephone network (PSTN)
+    - Hub : concentrator / repeater
+        - Takes an electrical signal and replicates it across all its ports. 
+        - Not common any more in modern networks. 
+- ### Layer 2 devices : 
+    - Switch: 
+        - Utilizes ASIC (application specific [[Integrated circuit]])
+        - Learns when a device is on the network and which port it is connected to via THAT device’s MAC address.
+        - Switch can be simple or highly complex, and programmable. 
+        - Switch only communicates with local network devices.
+    - Wireless Access Points (WAP)
+        - Specific type of network bridge, that connects wireless network segments with wired network segments
+        - common ones connects 802.11 wireless to 802.3 wired Ethernet devices
+    - Multilayer switch 
+        - MLS can provide network switching services, but also provides Layer 3 or higher OSI model services
+        - ASIC chip in this also handles routing functions. Allows device to communicate and pass data to non-local network devices
+        - highly programmable
+        - few or many ports. Not common in SoHo setups. 
+    - Router
+        - Most common network devices for connecting different networks together using Layer 3 logical network info
+        - Router uses software programming for decision making as compared to ASICS in Switches
+        - Router can communicate with local OR non-local devices. 
+        - Has fewer ports than switches. 
+        - 
+- ### Introduction to network devices
+    - Security Devices:
+        - Firewall
+            - Firewall can be placed on routers or hosts, and functions at multiple layers of the OSI model. 
+            - The Firewall blocks packets from entering or leaving a network
+                - Via Stateless inspection : examines packets against a set of rules, once a rule match occurs - the rule is enforced, and specified action is taken. 
+                - Via stateful inspection: Only examines the state of the connection between networks.  Specifically when a connection is made from an internal network to an external network, the firewall will not examine any packets returning from external. Typically external connections are not allowed to interact with internal networks.
+        - Intrusion detection system (IDS):
+            - Passive system designed to identify when a network breach or attack against the network is occurring.
+            - informs a network administrator when a breach or attack has occurred thru log files, SMS, and or email notification. 
+            - An IDS cannot prevent or stop a breach by itself. 
+            - Intrusion detection system (IDS) receives a copy of all traffic and evaluates it against a set of standards : 
+                - Signature based - based on malware or attack signatures
+                - Anomaly based - evaluates network traffic for suspicious changes
+                - Policy based - evaluates network traffic against a specific declared security policy
+            - May be deployed at the host level - host based intrusion detection system 
+        - IPS - Intrusion prevention system
+            - Designed to actively stop a breach or attack from succeeding in damaging the network
+            - Between a router - and a firewall so that all traffic flows thru it. 
+            - They can block offending IP address, they can close down vulnerable interfaces, terminate network sessions, redirect the attacks, they are designed to be active to stop the attack from breaching or damaging your network
+        - Virtual Private Networks
+            - Used by remote hosts to access a private network through an encrypted tunnel through a public network.
+            - Site to Site VPN - allow a remote site’s network to connect to main site’s network and be seen as a local network segment
+            - Remote - access VPN - host to site VPN : a remote system making connection using special software. 
+            - Host to host VPN (SSL VPN) - secure connection between two systems without use of client software.
+        - Internet Protocol Security (IPsec)
+            - Works at layer 3, most common suite of protocols to secure a VPN connection
+            - can be used with Authentication header protocol that offers only authentication and no encryption; or Encapsulating Security Payload that both authenticates and encrypts packets
+        - Both AH and ESP will operate in one of two modes: 
+            - Can be used in transport mode between two devices or 
+            - can be used in tunnel mode between two endpoints which is like Site to Site VPN - allow a remote site’s network to connect to main site’s network and be seen as a local network segment
+            - IPsec implements [[Internet Security Association and Key Management (ISAKMP)]] by default
+                - ISAKMP provides a method for transferring security key and authentication data between systems, outside of the security key generating process (a much more secure process)
+        - Generic Routing Encapsulation (GRE)
+            - Tunnelling protocol that is capable of encapsulating a wide variety of network layer protocols. 
+            - Internet Protocol Security (IPsec) will only transmit unicast packets (one-to-one communication). In many cases there is need for multicast or broadcast across an IPsec connection. We can accomplish multicast, or broadcast using GRE.
+        - Point-to-Point Tunneling PRotocol (PPTP)
+            - An older VPN technology that supports dial-up VPN connection. Microsoft’s implementation included additional security by adding GRE.
+        - Transport Layer Security (TLS) 
+            - Used to create a secure encrypted connection between two end devices or applications
+            - Cryptographic protocol using asymmetric cryptography to authenticate endpoints and then negotiate a symmetric security key which is used to secure the session. 
+            - TLS works at Layer 5 and above of the OSI model
+            - SSL was replaced by TLS.
+        - Secure Socket Layer (SSL)
+            - Version 3 is more secure but may not catch up to TLS
+    - Proxy server: 
+        - an appliance that requests resources on behalf of client machines.
+        - Used to retrieve resources from outside-untrusted networks on behalf of requesting client. 
+        - Hides and protects the client
+        - Also caches info for regularly sourced information
+    - Load balancer:
+        - content switch or content filter
+        - network appliance used to load balance between multiple hosts that contain the same data spreading out work for greater efficiency
+    - VPN Concentrator:
+        - provides many secure VPN connections to a network. 
+        - Provides proper tunnel link and encryption depending on the type of vpn connection.
+        - Most concentrators operate at multiple layers of the OSI model
+        - Most concentrators operate at Layer 3 (network layer)
+    - Network Access services:
+        - Network Interface Controller (NIC)
+            - Also called network interface card.
+            - Operates on two levels of the OSI model
+            - On Layer 2 (the data link layer)it functional means of network communication by determining what networking protocols will be used. It also provides local network node address via its own burned-in MAC address
+            - On Layer 1 (the physical layer), it determines how the network data traffic will be converted 1 bit at a time into an electrical signal that can traverse the network media being used.
+            - Most modern computers come with at least one NIC
+            - You can extend routers and other network devices by separate modules that can be inserted to provide proper NIC 
+        - RADIUS (Remote Authentication Dial-in User Service)
+            - Very popular [[AAA protocol]]
+            - Accounting services are very robust
+            - Only requesters password is encrypted, everything else is sent in the clear.
+        - TACACS+
+            - Remote access service used to authenticate remote devices and grant access to authorised network resources.
+            - Popular [[AAA protocol]]
+            - Accounting features are not as robust as those of RADIUS
+            - All transmissions in TACACS+ are encrypted
+    - Other services and applications:
+        - RAS (Remote Access Services)
+            - A description of combo of software or hardware required for a remote access connection.
+        - Web Services
+            - Creating a means of cross communication between software packages or disparate platforms.
+            - Translates communication into an XML format
+        - Unified voice services
+            - Description of combination of software hardware required to integrate voice into a network
+        - 
+    - 
+- [[DHCP]] in the network
+    - [[Static vs dynamic IP addressing]]
+- [[Domain Name Server (DNS)]]
+- 

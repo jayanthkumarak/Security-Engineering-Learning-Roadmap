@@ -1,0 +1,8 @@
+- Three-way handshake
+- after link is established, server sends a challenge message
+- Client responds with a password hash calculated from the challenge and the password
+- Server compares received hash with stored hash
+- Challenge-response continues periodically during connection
+- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FSecurity-Engineering%2FPi4xlcBJSz.png?alt=media&token=5f46de89-f650-4913-8f75-c92bfd4fdba8)
+- Microsoft made their own version called [[MS-CHAP]] that is commonly used with their PPTP protocol
+- 

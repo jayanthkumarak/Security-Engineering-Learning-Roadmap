@@ -1,0 +1,5 @@
+- Securing cloud based applications is hard because complexity increases in the cloud
+- Application misconfigurations are one of the most common security issues, especially cloud storage
+- Authorization and access : Controls should be strong enough for access from anywhere
+- API security : Attackers will try to exploit interfaces and APIs
+- 

@@ -1,0 +1,11 @@
+- Visibility
+    - Determine what apps are in use
+    - Are they authorized to use the apps
+- Compliance
+    - Are users complying with HIPAA? PCI-DSS ? 
+- Threat prevention
+    - prevent attacks
+- Data security
+    - Ensure that all data transfers are encrypted
+    - Protect PII with DLP
+- 

@@ -1,0 +1,2 @@
+- Usually integrated and supported by cloud provider.
+- Third party solutions provide single pane of glass for multiple cloud providers, or hybrid cloud environments

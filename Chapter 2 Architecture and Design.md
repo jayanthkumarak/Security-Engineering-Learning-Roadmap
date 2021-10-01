@@ -1,0 +1,82 @@
+- 2.1 Explain the importance of security concepts in an enterprise environment. (Expand this bullet point to read notes)
+    - Configuration management
+    - Data sovereignty
+    - Data protection
+    - Geographical considerations
+    - Response and recovery controls
+    - Secure Sockets Layer (SSL)/Transport Layer Security (TLS) inspection
+    - Hashing
+    - API considerations
+    - Site resiliency
+    - Deception and disruption
+    - Configuration Management helps ensure that systems are deployed in a secure consistent state and that they stay in a secure consistent state throughout their lifetime
+        - Diagrams support configuration management. Orgs should maintain physical and logical diagrams of their IT infra. They are also an element to complete IT/IS documentation that is necessary to maintain security but also troubleshooting and incident recovery.
+        - Baseline configuration is the initial implementation of a system. A baseline is the standard- ized minimal level of security that all systems in an organization must comply with.
+        - Baselines can be created as checklists that require someone to make sure a system is deployed a certain way or with a specific configuration. However, manual baselines are susceptible to human error. ^^A better alternative is the use of system images, scripts, and automated operating system tools to implement baselines.^^
+        - A security template is a set of security settings that can be mechanically applied to a computer to establish a specific configuration. Security templates can be used to establish baselines or bring a system up to compliance with a security policy. They can be custom- designed for workstations and server functions or purposes. Security templates are a generic concept; however, specific security templates can be applied via Windows’ Group Policy system.
+        - Security templates can be built by hand or by extracting settings from a preconfigured master. Once a security template exists, you can use it to configure a new or existing machine (by applying the template to the target either manually or through a Group Policy object [GPO])
+        - Some organizations have adopted a ^^standard naming convention^^ to control the names of systems, users, and other objects. 
+        - Following a standardized naming convention can assist with locating files, folders, data sets, or other assets because a likely name can be constructed to perform key- word searches against backups, archives, or data lakes.
+        - An ^^IP schema^^ is an organizational plan for the assignment of network addresses. Most net- works will implement private IP addresses from RFC 1918 based on their current network size with some room for expansion.
+    - ^^EXAM TIP : Configuration management includes developing physical and logical diagrams, establishing secure baselines, creating understandable naming conventions, and implementing secure IP schemas^^
+    - Data sovereignty is the concept that once information has been converted into a binary form and stored in digital files, it is subject to the laws of the region within which the storage device resides.If a question mentions “multinational” or “international,” then look for a data
+sovereignty angle.
+    - Data Protection: Data protection is the collection of security measures intended to control access to optimize the protection of confidentiality, integrity, and availability ([[CIA Triad]]).
+    - ### Data loss prevention (DLP)
+        - Data loss prevention (DLP) refers to systems specifically implemented to detect and prevent unauthorized access to, use of, or transmission of sensitive information.
+        - It may involve deep packet inspection, storage, and transmission encryption, contextual assessment, monitoring authorizations, and centralized management. Many regulations either directly require DLP solutions or strongly imply the need for DLP.
+        - A wide range of security measures can be implemented that provide Data loss prevention (DLP) benefits; these include
+            -  blocking use of email attachments, 
+            - setting strict job-specific authorization,
+            -  blocking cut-and-paste,
+            -  preventing use of portable drives,
+            -  blocking specific protocols or ports,
+            -  and setting all storage to be encrypted by default.
+        - **Cloud-based DLP** must focus on strict authorization to prevent unauthorized entities from viewing, accessing, or downloading sensitive data. Cloud DLP needs to include both storage encryption and transportation encryption to restrict access of resources to authorized users, software, and devices.
+        - ### Masking
+            -  is the hiding of content when being displayed. The most common type is password masking, where asterisks or dots are displayed instead of the typed password characters. Masking can also be used to obfuscate or hide personally identifiable information (PII), protected health information (PHI), or otherwise sensitive data from being displayed by default on a screen or on a printout.
+        - **Encryption** is used to protect confidentiality of data.
+            - **At rest :** Data at rest is stored on a storage device.
+            - Storage encryption, such as file encryption or whole-drive encryption, should be used to protect data at rest.
+            - An example of data at rest protection is the Encrypted File System (EFS) of the Windows NTFS file format, which provides file encryption. 
+            - Most current data at rest encryption options, including EFS, use the symmetric Advanced Encryption Algorithm (AES).
+            - **In transit/motion** -Data in transit and data in motion are data being communicated over a network connection. Session encryption or a VPN should be used to protect data in transit.
+            - In processing: 
+                - “Data in processing is data that is actively being used, either in a processor or other computational element. Protecting data while in use is a much trickier proposition than protecting it in transit or in storage. While encryption can be used in these other situations, it is not practical to perform operations on encrypted data. This means that other means need to be taken to protect the data. Protected memory schemes and address space layout randomization are two tools that can be used to prevent data security failures during processing. Secure coding principles, including the definitive wiping of critical data elements once they are no longer needed, can assist in protecting data that is in processing.”
+                - Excerpt From: [[Wm. Arthur Conklin. “CompTIA Security+ All-in-One Exam Guide (Exam SY0-601)).” ]]Apple Books. 
+        - ### Tokenization
+            - Tokenization is the use of a random value to take the place of a data element that has traceable meaning. A good example of this is the credit card approval process; you do not need to keep a record of the card number, the cardholder’s name, or any of the sensitive data concerning the card verification code (CVC) because the transaction agent returns an approval code, which is a unique token to that transaction. You can store this approval code, the token, in your system, and if there comes a time you need to reference the original transaction, this token provides you with complete traceability to it. Yet, if it is disclosed to an outside party, it reveals nothing.
+                - Excerpt From: Wm. Arthur Conklin. “CompTIA Security+ All-in-One Exam Guide (Exam SY0-601)).” Apple Books. 
+        - ### Rights Management
+            - “Protecting data has many different meanings in different contexts. ^^Rights management is the systematic establishment of rules and order to the various rights that users can invoke over digital objects.^^ For example, at the file level, there is read, write, and other access control options. At a context level, the options go further, including control over granular aspects such as editing, printing, copying, replaying, and so on. 
+            - Digital rights management (DRM) is the term used to describe typical rights scenarios associated with various types of media files, including playing them, copying them, editing them, and saving them to your own device. These rights are designed to prevent unauthorized redistribution or use of digital content. Rights management goes further when you add items such as text documents. Who can edit, copy, delete, or move the material in corporate documents or databases is an enterprise concern. Developing a corporate-level set of policies and procedures to manage rights is essential when the enterprise has significant needs in this area. An ad hoc approach will lead to gaps and failures in what an enterprise-level solution can bring. Major content platforms have the ability to manage ”
+            - Excerpt From: Wm. Arthur Conklin. “CompTIA Security+ All-in-One Exam Guide (Exam SY0-601)).” Apple Books. 
+        - ### Geographical considerations
+            - “The Internet is a worldwide connection of systems, and once connected to the Internet, you are literally connected to the world. This makes geographical considerations a real topic, as there are a wide range of laws and regulations that do not stop at physical borders. Want to store information on EU citizens in the U.S.? The elements of GDPR can still apply if you do business with them. Want to store data on people in a foreign country? Their data protection laws may mandate certain data elements are stored on servers within their national borders. Researching and understanding the geographical implications and architecting the appropriate geographical considerations to ensure compliance are not just for large multinational companies.
+            - With the mass migration to teleconferencing as a result of the pandemic in 2020, there has been much scrutiny over where data is stored and transmitted. Zoom, a major provider in the teleconferencing market, faced significant backlash over data being routed through servers in China. This adds the dimension of market forces and public opinion to the geographic consideration arena, and one that should be addressed before it becomes a business-impacting issue.”
+            - Excerpt From: Wm. Arthur Conklin. “CompTIA Security+ All-in-One Exam Guide (Exam SY0-601)).” Apple Books. 
+        - Response and Recovery Controls
+            - DR and BC 
+        - TLS Inspection and SSL inspection
+            - “Many security appliances are designed to include TLS inspection services so that the use of SSL/TLS encryption does not stop the appliance from doing its job. To perform the task of Secure Sockets Layer (SSL)/Transport Layer Security (TLS) inspection, the appliance must receive a set of proper keys to the encryption. The appliance can then receive the data, decrypt the data, perform its security task, re-encrypt the data using the same keys, and send the data on its way to the destination.
+            - It is common for next-generation firewalls (NGFWs) to have TLS inspection built in, providing this level of protection for both inbound and outbound data. TLS inspection consists of two connections: server protection and client protection. The server protection inspects incoming connections to servers. The client protection inspects TLS outgoing connections initiated by clients inside the network. To perform TLS inspection requires two separate secure connections: one from the client to the firewall and one from the firewall to the server. You can use client protection alone, server protection alone, or client and server protection together. By decrypting the data communication at the firewall, the appliance is able to perform deep packet inspection and[…]”
+            - Excerpt From: Wm. Arthur Conklin. “CompTIA Security+ All-in-One Exam Guide (Exam SY0-601)).” Apple Books. 
+        - 
+- 
+- 2.2 Summarize virtualization and cloud computing concepts
+    - “There are many different ^^cloud deployment models^^. Clouds can be created by many entities, both internal and external to an organization. Many commercial cloud services are available from a variety of firms, ranging from Google and Amazon to smaller, local providers. Internally, an organization’s own services can replicate the advantages of cloud computing while improving the utility of limited resources. The promise of cloud computing is improved utility and is marketed under the concepts of Platform as a Service (PaaS), Software as a Service (SaaS), and Infrastructure as a Service (IPaaS).”
+        - Excerpt From: Wm. Arthur Conklin. “CompTIA Security+ All-in-One Exam Guide (Exam SY0-601)).” Apple Books. 
+    - Infrastructure as a Service (IaaS)
+        - Infrastructure as a Service (IaaS) is a marketing term used to describe cloud-based systems that are delivered as a virtual solution for computing. Rather than firms needing to build data centers, IaaS allows them to contract for utility computing as needed. IaaS is specifically marketed on a pay-per-use basis, scalable directly with need.
+    - Platform as a Service (PaaS)
+        - Platform as a Service (PaaS) is a marketing term used to describe the offering of a computing platform in the cloud. Multiple sets of software working together to provide services, such as database services, can be delivered via the cloud as a platform. PaaS offerings generally focus on security and scalability, both of which are characteristics that fit with cloud and platform needs.
+    - Software as a Service (SaaS)
+    - Software as a Service (SaaS) is the offering of software to end users from within the cloud. Rather than installing software on client machines, SaaS acts as software on demand, where the software runs from the cloud. This has a couple advantages: updates can be seamless to end users, and integration between components can be enhanced. Common examples of SaaS are products offered via the Web as subscription services, such as Microsoft Office 365 and Adobe Creative Suite.
+    - Anything as a Service (XaaS)
+        - With the growth of cloud services, applications, storage, and processing, the scale provided by cloud vendors has opened up new offerings that are collectively called Anything as a Service (XaaS). The wrapping of the previously mentioned SaaS and IaaS components into a particular service (say, Disaster Recovery as a Service) creates a new marketable item.
+        - Excerpt From: Wm. Arthur Conklin. “CompTIA Security+ All-in-One Exam Guide (Exam SY0-601)).” Apple Books. 
+- 2.3 Summarize secure application development, deployment, and automation concepts on [[September 17th, 2021]]
+    - Environment
+        - The organization’s IT environment must be configured and segmented to properly imple- ment staging. This often requires at least four main network divisions: development, test, staging, and production.
+        - Development
+            - The development network is where new software code is being crafted by on-staff pro- grammers and developers. For some organizations, this might also be where custom-built hardware is being created. This network is to be fully isolated from all other network divisions to prevent ingress of malware or egress of unfinished products. The development environment must be updated, secure, and stable. Versions of tools and utilities can be vali- dated and verified using file hashes.
